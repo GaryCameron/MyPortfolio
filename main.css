@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import 'https://fonts.googleapis.com/css?family=Reenie+Beanie';
+
+html {
+    scroll-behavior: smooth;
+  }
 
 li {
     list-style-type: none;
@@ -9,14 +14,37 @@ li {
 body {
     padding: 0;
     margin: 0;
+    font-family: 'Raleway', sans-serif;
 }
 
 #left-side {
     display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+#left-side img{
+    height: 25px;
+}
+
+#left-side:hover {
+    color: #edb54c;
+
 }
 
 #right-side {
     display: flex;
+    margin-right: 20px;
+    position: relative;
+    border: solid 2px black;
+}
+
+#right-side li:hover {
+    color: #edb54c;
+
+    /* background-color: #edb54c;
+    color: black;
+    border: solid 1px grey; */
 }
 
 #nav-container {
@@ -24,53 +52,308 @@ body {
     justify-content: space-between;
     height: 50px;
     align-items: center;
-    font-family: 'Raleway', sans-serif;
+    overflow: hidden;
+    background: black;
+    border-bottom: 0.35vh solid gray;
+    -webkit-box-shadow: 0px 10px 43px -12px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 43px -12px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 43px -12px rgba(0,0,0,0.75);
+    position: fixed ;
+    top: 0px ;
+    width: 100vw;
+    z-index: 1;
+    color: white;
+}
+
+#right-side li:hover {
+font-weight: bold;
+border-radius: 5px;
+}
+
+#nav-container a:visited {
+    color: white;
 }
 
 #hero {
-    height: 400px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/jantine-doornbos-HvYy5SEefC8-unsplash.jpg");
+    height: 100vh;
     overflow-y: hidden;
-}
-
-#hero-image {
-    width: 100%;
-}
-
-.intro {
-    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+}
+
+#hero-container{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:#fff;
+    
 }
 
 .intro h1 {
-    font-family: 'Raleway', sans-serif;
-
+    color:#fff;
+    font-size: 5em;
 }
 
 #my-stack {
     width: 100%;
     display: flex;
-    margin-top: 30px;
+    transition-duration: 2s;
+}
+
+#myName:hover{
+    color: #edb54c;
+}
+
+#about{
+    min-height: 100vh;
+    position: relative;
+    color: white;
+    background-color: #4684d0;
+    background-image: url("https://www.transparenttextures.com/patterns/bright-squares.png");
+    padding-bottom: 25px;
+    padding-top: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+
+
+#aboutHead{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#aboutTitle{
+    text-align: center;
+}
+
+#aboutMe{
+    text-align: center;
+}
+
+#aboutText {
+    display: flex;
+    position: relative;
+    width: 80vw;
+    justify-content: space-evenly;
+}
+.aboutSection {
+    width: 33.3%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    /* margin-bottom: 50px; */
+    position: relative;
+    justify-content: space-evenly;
+    
+}
+
+.aboutSection p {
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+#aboutImg{
+    position: relative;
+    width: 80vw;
+    height: 100px;
+    border: solid 2px white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#aboutTest{
+    height: 25px;
+}
+
+/* #aboutPic {
+    width: 200px;
+    border-radius: 50%;
+} */
+
+.aboutDetail{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+}
+
+#projectSection {
+    min-height: 100vh;
+    position: relative;
+    color: white;
+    background-color: grey;
+    background-image: url("https://www.transparenttextures.com/patterns/bright-squares.png");
+    padding-bottom: 25px;
+    padding-top: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#projectsHead {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 10px;
+}
+
+#projectTiles {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* position: fixed; */ 
+}
+
+.card {
+    width: 200px;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    color: black;
+    -webkit-box-shadow: 0px 10px 43px -12px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 43px -12px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 43px -12px rgba(0,0,0,0.75);
+    /* border-radius: 10px; */
+    /* border: solid 4px #294f96; */
+}
+
+.projectPic {
+    width: 150px;
+    border-radius: 10px;
+}
+
+.cardLogo {
+    width: 25px;
+    margin-left: 7px;
+}
+
+.cardLogoContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+#test1{
+    width: 100vw;
+    height: 100px;
+    background-color: black;
+    border-top: 0.35vh solid white;
+    -webkit-box-shadow: 0px 10px 43px -12px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 43px -12px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 43px -12px rgba(0,0,0,0.75);
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: fixed; */
+}
+
+/* #duckling {
+    height: 75px;
+    width: 75px;
+} */
+
+
+
+.images1 {
+    display: flex;
+    height: 50px;
+    width: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* position: absolute; */
+}
+
+
+#footer{
+    /* width: 100vw; */
+    height: 300px;
+    background-color: black;
+    border-top: 0.35vh solid white;
+    -webkit-box-shadow: 0px 10px 43px -12px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 43px -12px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 43px -12px rgba(0,0,0,0.75);
+    margin-top: 0;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+#footer img {
+    height: 50px;
 }
 
 .logo {
     width: 100px;
+    animation-iteration-count: 1;
 }
+
+/* #demo {
+    text-shadow: 2px 2px 4px rgba(255,255,255,0.6);
+} */
+
 
 #my-stack div {
     width: 33.3%;
     display: flex;
     align-items: center;
-    font-family: 'Raleway', sans-serif;
     flex-direction: column;
     padding: 20px;
+    margin: 30px;
+    text-align: center;
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.41);
+    -moz-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.41);
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.41);
+}
+
+#my-stack div:hover {
+   -webkit-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.41);
+    -moz-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.41);
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.41);
+
 }
 
 #image-container {
     width: 100%;
     display: flex;
+    background-color: silver;
+
 }
 
 .probs {
@@ -94,3 +377,63 @@ body {
 a {
     text-decoration: none;
 }
+
+
+.button {
+    background-color: #294f96; /* Green */
+    border: solid 2px white; 
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 625;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+
+  .button1:hover {
+    background-color: white;
+    color: #4684d0;
+    border: solid 2px #4684d0;
+  }
+
+  /* .url {
+      cursor: url(myBall.cur),auto;
+    } */
+
+   .icon{
+       width: 65px;
+       color: white;
+   } 
+
+  .slideshow {
+    position: relative;
+    overflow: hidden;
+  }
+  .images {
+    background: url(assets/Duck+on+Phone.png);
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* bottom: 700; */
+    height: 100%;
+    width: 300%;
+    animation: slideshow 15s linear infinite;
+    transform: translate3d(0, 0, 0);
+  }
+  @keyframes slideshow {
+    0%    { left: 0; }
+    100%  { left: -200%; }
+  }
+
+  @keyframes moveSlideshow {  
+    100% { 
+      -webkit-transform: translateX(-200%);  
+    }
+  }
+
+  

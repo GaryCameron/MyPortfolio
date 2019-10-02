@@ -6,86 +6,391 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="main.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+
+    <link rel="manifest" href="/site.webmanifest">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="https://kit.fontawesome.com/d37d3a4abf.js" crossorigin="anonymous"></script>
+    <title>Gary Cameron Portfolio</title>
 </head>
 
 <body>
 
+    <a name="top"></a>
+
     <nav id="nav-container">
-
         <div id="left-side">
-            <li>Home</li>
-            <a href="about.html">
-                <li>About</li>
-            </a>
+            <li id="myName"><span id="nameText" onclick="reload()">Gary Cameron</span></li>
+            <li> <a href="https://github.com/GaryCameron" target="_blank"><img src="assets/git3.png"></a></li>
+            <li> <a href="https://uk.linkedin.com/in/gary-cameron-265b1811" target="_blank"> <img
+                        src="assets/LinkedIn-white-text2.png"></a></li>
+            <li> <a href="https://wearecodenation.com" target="_blank"><img src="assets/CN-Logo-e1533565247363.png"></a>
+            </li>
         </div>
-
         <div id="right-side">
-            <li>Projects</li>
-            <li>Contacts</li>
-        </div>
+            <li onclick='navAction("hero")'>Home</li>
+            <li onclick='navAction("about")'>About</li>
+            <li onclick='navAction("projectSection")'>Projects</li>
 
+            <li onclick='navAction("test1")'>Duck</li>
+        </div>
     </nav>
 
-    <div class="intro">
-        <h1>Hi my name is Gary. Welcome to my web page.</h1>
 
-    </div>
+    <section>
+        <div id="hero">
+            <div class="intro" id="hero-container">
+                <h1 id="demo" class="animated 2s zoomInDown delay-2s">A Developing Developer</h1>
+                <h3 class="animated 2s lightSpeedIn delay-3s">Talk to the Duck</h3>
+                <button class="button button1" onclick="contact()">Contact Me</button>
+            </div>
+        </div>
+    </section>
 
-    <div id="hero">
-        <img id="hero-image" src="./assets/cnrandom.jpg">
-    </div>
+
+    <section>
+            <!-- <div id="my-stack" style="visibility : hidden"> -->
+        <div id="my-stack" style="display : none">
+            <div class="stackItem">
+                <img class="logo" id="html" src="./assets/html5.png" onmouseover="stackAnimOn('html')"
+                    onmouseout="stackAnimOff('html')">
+                <label for="htmlfile">Competency:</label>
+                <progress id="htmlfile" max="100" value="70"> 70% </progress>
+                <p>I have been learning HTML to create website content.</p>
+            </div>
+
+            <div class="stackItem">
+                <img class="logo" id="css" src="./assets/css3.png" onmouseover="stackAnimOn('css')"
+                    onmouseout="stackAnimOff('css')">
+                <label for="cssfile">Competency:</label>
+                <progress id="cssfile" max="100" value="70"> 70% </progress>
+                <p>I have been learning CSS to style my web pages.</p>
+            </div>
+
+            <div class="stackItem">
+                <img class="logo" id="javascript" src="./assets/js.jpg" onmouseover="stackAnimOn('javascript')"
+                    onmouseout="stackAnimOff('javascript')">
+                <label for="jsfile">Competency:</label>
+                <progress id="jsfile" max="100" value="70"> 70% </progress>
+                <p>I have been learning how to write JavaScript.</p>
+            </div>
+
+            <div class="stackItem">
+                <img class="logo" id="csharp" src="assets/csharp.png" onmouseover="stackAnimOn('csharp')"
+                    onmouseout="stackAnimOff('csharp')">
+                <label for="csfile">Competency:</label>
+                <progress id="csfile" max="100" value="70"> 70% </progress>
+                <p>I have been learning how to write C#.</p>
+            </div>
+
+        </div>
+    </section>
 
 
-    <div id="my-stack">
-        <div>
-            <img class="logo" src="./assets/html5.png">
-            <p>I have been learning HTML to create website content.</p>
+    <section id="about">
+
+        <div id="aboutHead"></div>
+            <!-- <img id="aboutPic" src="./assets/probs3.jpg"> -->
+            <h1 id="aboutTitle">About Me</h1>
+            <p id="aboutMe">A little bit of information about my quiet, boring but happy life</p>
+
+            <div id="aboutTest">l</div>
         </div>
 
-        <div>
-            <img class="logo" src="./assets/css3.png">
-            <p>I have been learning CSS to style my web pages.</p>
+        <div id=aboutText>
+
+            <div class="newAbout">
+
+
+            </div>
+
+
+            <div class="aboutSection">
+                <h2>Why</h2>
+                <p>Trained chef with 5 years in hospitality, qualified Mortgage adviser. Ran United Awareness for 18
+                    years uintil I closed it late in 2018.</p>
+            </div>
+
+            <div class="aboutSection">
+                <h2>Experience</h2>
+                <!-- <p>I love technology, creating things, seeing the magic happen.</p> -->
+
+                <div class="aboutDetail">
+                        <img src="./assets/education.svg" class="icon" id="education" onmouseover="showInfo('education')"
+                            onmouseout="hideInfo('education')">
+                </div>
+
+                <div class="aboutDetail">
+                        <img src="./assets/artificial-intelligence.svg" class="icon" id="intelligence" onmouseover="showInfo('intelligence')"
+                            onmouseout="hideInfo('intelligence')">
+                </div>
+
+                <div class="aboutDetail">
+                        <img src="./assets/teamwork.svg" class="icon" id="teamwork" onmouseover="showInfo('teamwork')"
+                            onmouseout="hideInfo('teamwork')">
+                </div>
+
+                <div class="aboutDetail">
+                        <img src="./assets/support.svg" class="icon" id="support" onmouseover="showInfo('support')"
+                            onmouseout="hideInfo('support')">
+                </div>
+
+                <div class="aboutDetail">
+                        <img src="./assets/meeting.svg" class="icon" id="meeting" onmouseover="showInfo('meeting')"
+                            onmouseout="hideInfo('meeting')">
+                </div>
+
+            </div>
+
+            <div class="aboutSection">
+                <h2>Interests</h2>
+                <!-- <img src="assets/cooking.svg" alt="Health food"> -->
+                <div class="aboutDetail">
+                    <!-- <p>Family</p> -->
+                    <img src="./assets/family.svg" class="icon" id="family" onmouseover="showInfo('family')"
+                        onmouseout="hideInfo('family')">
+                </div>
+
+
+
+                <div class="aboutDetail">
+                    <img src="./assets/cooking.svg" class="icon" id="cooking" onmouseover="showInfo('cooking')"
+                        onmouseout="hideInfo('cooking')">
+                    <!-- <p>Cooking</p> -->
+                </div>
+
+                <div class="aboutDetail">
+                    <!-- <p>Yoga</p> -->
+                    <img src="./assets/warrior.svg" class="icon" id="yoga" onmouseover="showInfo('yoga')"
+                        onmouseout="hideInfo('yoga')">
+                </div>
+
+                <div class="aboutDetail">
+                    <img src="./assets/french-bulldog.svg" class="icon" id="dog" onmouseover="showInfo('dog')"
+                        onmouseout="hideInfo('dog')">
+                    <!-- onmouseout="hideInfo('dog')" -->
+                    <!-- <p>Family Dog "Rocket"</p> -->
+                </div>
+
+                <div class="aboutDetail">
+                    <!-- <p>Cycling</p> -->
+                    <img src="./assets/bicycle.svg" class="icon" id="bicycle" onmouseover="showInfo('bicycle')"
+                        onmouseout="hideInfo('bicycle')">
+                    <!-- onmouseout="hideInfo('bicycle')" -->
+                </div>
+
+            </div>
+
         </div>
 
-        <div>
-            <img class="logo" src="./assets/js.jpg">
-            <p>I have been learning how to write JavaScript.</p>
+        <div id="aboutImg">
+
+                <img src="./assets/teamwork.svg" class="icon">
+                <img src="./assets/support.svg" class="icon">
+                <img src="./assets/education.svg" class="icon">
+                <img src="./assets/meeting.svg" class="icon">
+                <img src="./assets/artificial-intelligence.svg" class="icon"></br>
+    
+                <img src="./assets/web.svg" class="icon">
+                <img src="./assets/coding.svg" class="icon">
+                <img src="./assets/chip.svg" class="icon">
+                <img src="./assets/computer.svg" class="icon">
+                <img src="./assets/data.svg" class="icon"></br>
+    
+                <img src="./assets/cooking.svg" class="icon">
+                <img src="./assets/warrior.svg" class="icon">
+                <img src="./assets/bicycle.svg" class="icon">
+                <img src="./assets/french-bulldog.svg" class="icon">
+                <img src="./assets/family.svg" class="icon"></br>
         </div>
 
-    </div>
+        <!-- <div id="aboutImg">
+            <img src="./assets/teamwork.svg" class="icon">
+            <img src="./assets/support.svg" class="icon">
+            <img src="./assets/education.svg" class="icon">
+            <img src="./assets/meeting.svg" class="icon">
+            <img src="./assets/artificial-intelligence.svg" class="icon"></br>
+
+            <img src="./assets/web.svg" class="icon">
+            <img src="./assets/coding.svg" class="icon">
+            <img src="./assets/chip.svg" class="icon">
+            <img src="./assets/computer.svg" class="icon">
+            <img src="./assets/data.svg" class="icon"></br>
+
+            <img src="./assets/cooking.svg" class="icon">
+            <img src="./assets/warrior.svg" class="icon">
+            <img src="./assets/bicycle.svg" class="icon">
+            <img src="./assets/french-bulldog.svg" class="icon">
+            <img src="./assets/family.svg" class="icon"></br>
+
+             <img class="aboutImage" src="assets/cnrandom.jpg">
+        </div> -->
+
+    </section>
 
 
+    <section id="projectSection">
 
-
-    <div class="intro">
-        <h1>We Solve Problems</h1>
-    </div>
-
-    <div id="image-container">
-
-        <div class="probs">
-            <img src="./assets/probs1.jpg">
+        <div id="projectsHead">
+            <div>
+                <h1 id="projectsTitle">Projects</h1>
+                <p id="projectsDesc">Some of my work from Code Nation</p>
+            </div>
         </div>
 
-        <div class="probs">
-            <img src="./assets/probs2.jpg">
+        <div id="projectTiles">
+
+            <div class="card">
+                <h3>Key Code</h3>
+                <img class="projectPic" src="./assets/probs1.jpg">
+                <div class="cardLogoContainer">
+                    <img class="cardLogo" src="assets/css.svg">
+                    <img class="cardLogo" src="assets/javascript2.svg">
+                    <img class="cardLogo" src="assets/hashtag.svg">
+                    <img class="cardLogo" src="assets/html-5.svg">
+                    <img class="cardLogo" src="assets/github.svg">
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>REACT Calculator</h3>
+                <img class="projectPic" src="./assets/probs2.jpg">
+                <div class="cardLogoContainer">
+                    <img class="cardLogo" src="assets/css.svg">
+                    <img class="cardLogo" src="assets/javascript2.svg">
+                    <img class="cardLogo" src="assets/react.svg">
+                    <img class="cardLogo" src="assets/html-5.svg">
+                    <img class="cardLogo" src="assets/github.svg">
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Timer Application</h3>
+                <img class="projectPic" src="./assets/probs3.jpg">
+                <div class="cardLogoContainer">
+                    <img class="cardLogo" src="assets/css.svg">
+                    <img class="cardLogo" src="assets/javascript2.svg">
+                    <img class="cardLogo" src="assets/hashtag.svg">
+                    <img class="cardLogo" src="assets/html-5.svg">
+                    <img class="cardLogo" src="assets/github.svg">
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Project 4</h3>
+                <img class="projectPic" src="./assets/probs1.jpg">
+                <div class="cardLogoContainer">
+                    <img class="cardLogo" src="assets/css.svg">
+                    <img class="cardLogo" src="assets/javascript2.svg">
+                    <img class="cardLogo" src="assets/hashtag.svg">
+                    <img class="cardLogo" src="assets/html-5.svg">
+                    <img class="cardLogo" src="assets/react.svg">
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Project 5</h3>
+                <img class="projectPic" src="./assets/probs2.jpg">
+                <div class="cardLogoContainer">
+                    <img class="cardLogo" src="assets/css.svg">
+                    <img class="cardLogo" src="assets/javascript2.svg">
+                    <img class="cardLogo" src="assets/hashtag.svg">
+                    <img class="cardLogo" src="assets/html-5.svg">
+                    <img class="cardLogo" src="assets/mysql.svg">
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Project 6</h3>
+                <img class="projectPic" src="./assets/probs3.jpg">
+                <div class="cardLogoContainer">
+                    <img class="cardLogo" src="assets/css.svg">
+                    <img class="cardLogo" src="assets/javascript2.svg">
+                    <img class="cardLogo" src="assets/hashtag.svg">
+                    <img class="cardLogo" src="assets/html-5.svg">
+                    <img class="cardLogo" src="assets/nodejs.svg">
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Project 7</h3>
+                <img class="projectPic" src="./assets/probs3.jpg">
+                <div class="cardLogoContainer">
+                    <img class="cardLogo" src="assets/css.svg">
+                    <img class="cardLogo" src="assets/javascript2.svg">
+                    <img class="cardLogo" src="assets/hashtag.svg">
+                    <img class="cardLogo" src="assets/html-5.svg">
+                    <img class="cardLogo" src="assets/nodejs.svg">
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Project 8</h3>
+                <img class="projectPic" src="./assets/probs3.jpg">
+                <div class="cardLogoContainer">
+                    <img class="cardLogo" src="assets/css.svg">
+                    <img class="cardLogo" src="assets/javascript2.svg">
+                    <img class="cardLogo" src="assets/hashtag.svg">
+                    <img class="cardLogo" src="assets/html-5.svg">
+                    <img class="cardLogo" src="assets/nodejs.svg">
+                </div>
+            </div>
         </div>
 
-    </div>
+    </section>
 
-    <div id="images2">
-        <img src="./assets/probs3.jpg">
-    </div>
+    <!-- <section>
+        <div id="image-container">
+
+            <div class="probs">
+                <img src="./assets/probs1.jpg">
+            </div>
+
+            <div class="probs">
+                <img src="./assets/probs2.jpg">
+            </div>
+
+        </div>
+
+        <div id="images2">
+            <img src="./assets/probs3.jpg">
+        </div>
+    </section> -->
+
+    <section id="test1" class="slideshow1">
+        <div id="images1">
+            <img id="duck" src="./assets/duckling.png">
+        </div>
+    </section>
 
 
-    </div>
-
-    </div>
 
 
+
+
+    <!-- <section id="footer" class="slideshow">
+        <footer class="images">
+            <img id="duckling" src="./assets/Duck+on+Phone.png">
+        </footer>
+    </section> -->
+
+
+
+
+    <script src="scripts.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 
 </body>
 
 </html>
+
+
+<!-- <i class="fas fa-biking"></i> -->
