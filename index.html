@@ -34,12 +34,15 @@
             <li> <a href="https://wearecodenation.com" target="_blank"><img src="assets/CN-Logo-e1533565247363.png"></a>
             </li>
         </div>
-        <div id="right-side">
+        <div class="rightNav" id="right-side">
             <li onclick='navAction("hero")'>Home</li>
             <li onclick='navAction("about")'>About</li>
             <li onclick='navAction("projectSection")'>Projects</li>
 
             <li onclick='navAction("test1")'>Duck</li>
+
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+
         </div>
     </nav>
 
@@ -50,14 +53,41 @@
                 <h1 id="demo" class="animated 2s zoomInDown delay-2s">A Developing Developer</h1>
                 <h3 class="animated 2s lightSpeedIn delay-3s">Talk to the Duck</h3>
                 <button class="button button1" onclick="contact()">Contact Me</button>
+
+                <button class="button button1" onclick="showStack()">Show Stack</button>
             </div>
         </div>
     </section>
 
+    <section id="stackSection2" style="display: none;">
 
-    <section>
-            <!-- <div id="my-stack" style="visibility : hidden"> -->
-        <div id="my-stack" style="display : none">
+            <div id="my-stack2">
+    
+                <div class="stackItem2">
+                    <p>I have been learning HTML to create website content.</p>
+                </div>
+    
+                <div class="stackItem2">
+                    <p>I have been learning CSS to style my web pages.</p>
+                </div>
+    
+                <div class="stackItem2">
+                   <p>I have been learning how to write JavaScript.</p>
+                </div>
+    
+                <div class="stackItem2">
+                    <p>I have been learning how to write C#.</p>
+                </div>
+    
+            </div>
+    
+        </section>
+
+
+    <section id="stackSection" style="display : none">
+
+        <div id="my-stack">
+
             <div class="stackItem">
                 <img class="logo" id="html" src="./assets/html5.png" onmouseover="stackAnimOn('html')"
                     onmouseout="stackAnimOff('html')">
@@ -91,17 +121,20 @@
             </div>
 
         </div>
+
     </section>
 
+
+    
 
     <section id="about">
 
         <div id="aboutHead"></div>
-            <!-- <img id="aboutPic" src="./assets/probs3.jpg"> -->
-            <h1 id="aboutTitle">About Me</h1>
-            <p id="aboutMe">A little bit of information about my quiet, boring but happy life</p>
+        <!-- <img id="aboutPic" src="./assets/probs3.jpg"> -->
+        <h1 id="aboutTitle">About Me</h1>
+        <p id="aboutMe">A little bit of information about my quiet, boring but happy life</p>
 
-            <div id="aboutTest">l</div>
+        <div id="aboutTest">l</div>
         </div>
 
         <div id=aboutText>
@@ -114,8 +147,35 @@
 
             <div class="aboutSection">
                 <h2>Why</h2>
-                <p>Trained chef with 5 years in hospitality, qualified Mortgage adviser. Ran United Awareness for 18
-                    years uintil I closed it late in 2018.</p>
+                <!-- <p>Trained chef with 5 years in hospitality, qualified Mortgage adviser. Ran United Awareness for 18
+                    years uintil I closed it late in 2018.</p> -->
+
+
+                <div class="aboutDetail">
+                    <img src="./assets/web.svg" class="icon" id="web" onmouseover="showInfo('web')"
+                        onmouseout="hideInfo('web')">
+                </div>
+
+                <div class="aboutDetail">
+                    <img src="./assets/coding.svg" class="icon" id="coding" onmouseover="showInfo('coding')"
+                        onmouseout="hideInfo('coding')">
+                </div>
+
+                <div class="aboutDetail">
+                    <img src="./assets/chip.svg" class="icon" id="chip" onmouseover="showInfo('chip')"
+                        onmouseout="hideInfo('chip')">
+                </div>
+
+                <div class="aboutDetail">
+                    <img src="./assets/computer.svg" class="icon" id="computer" onmouseover="showInfo('computer')"
+                        onmouseout="hideInfo('computer')">
+                </div>
+
+                <div class="aboutDetail">
+                    <img src="./assets/data.svg" class="icon" id="data" onmouseover="showInfo('data')"
+                        onmouseout="hideInfo('data')">
+                </div>
+
             </div>
 
             <div class="aboutSection">
@@ -123,28 +183,28 @@
                 <!-- <p>I love technology, creating things, seeing the magic happen.</p> -->
 
                 <div class="aboutDetail">
-                        <img src="./assets/education.svg" class="icon" id="education" onmouseover="showInfo('education')"
-                            onmouseout="hideInfo('education')">
+                    <img src="./assets/education.svg" class="icon" id="education" onmouseover="showInfo('education')"
+                        onmouseout="hideInfo('education')">
                 </div>
 
                 <div class="aboutDetail">
-                        <img src="./assets/artificial-intelligence.svg" class="icon" id="intelligence" onmouseover="showInfo('intelligence')"
-                            onmouseout="hideInfo('intelligence')">
+                    <img src="./assets/artificial-intelligence.svg" class="icon" id="intelligence"
+                        onmouseover="showInfo('intelligence')" onmouseout="hideInfo('intelligence')">
                 </div>
 
                 <div class="aboutDetail">
-                        <img src="./assets/teamwork.svg" class="icon" id="teamwork" onmouseover="showInfo('teamwork')"
-                            onmouseout="hideInfo('teamwork')">
+                    <img src="./assets/teamwork.svg" class="icon" id="teamwork" onmouseover="showInfo('teamwork')"
+                        onmouseout="hideInfo('teamwork')">
                 </div>
 
                 <div class="aboutDetail">
-                        <img src="./assets/support.svg" class="icon" id="support" onmouseover="showInfo('support')"
-                            onmouseout="hideInfo('support')">
+                    <img src="./assets/support.svg" class="icon" id="support" onmouseover="showInfo('support')"
+                        onmouseout="hideInfo('support')">
                 </div>
 
                 <div class="aboutDetail">
-                        <img src="./assets/meeting.svg" class="icon" id="meeting" onmouseover="showInfo('meeting')"
-                            onmouseout="hideInfo('meeting')">
+                    <img src="./assets/meeting.svg" class="icon" id="meeting" onmouseover="showInfo('meeting')"
+                        onmouseout="hideInfo('meeting')">
                 </div>
 
             </div>
@@ -190,26 +250,7 @@
 
         </div>
 
-        <div id="aboutImg">
 
-                <img src="./assets/teamwork.svg" class="icon">
-                <img src="./assets/support.svg" class="icon">
-                <img src="./assets/education.svg" class="icon">
-                <img src="./assets/meeting.svg" class="icon">
-                <img src="./assets/artificial-intelligence.svg" class="icon"></br>
-    
-                <img src="./assets/web.svg" class="icon">
-                <img src="./assets/coding.svg" class="icon">
-                <img src="./assets/chip.svg" class="icon">
-                <img src="./assets/computer.svg" class="icon">
-                <img src="./assets/data.svg" class="icon"></br>
-    
-                <img src="./assets/cooking.svg" class="icon">
-                <img src="./assets/warrior.svg" class="icon">
-                <img src="./assets/bicycle.svg" class="icon">
-                <img src="./assets/french-bulldog.svg" class="icon">
-                <img src="./assets/family.svg" class="icon"></br>
-        </div>
 
         <!-- <div id="aboutImg">
             <img src="./assets/teamwork.svg" class="icon">
@@ -394,3 +435,59 @@
 
 
 <!-- <i class="fas fa-biking"></i> -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- @media screen and (max-width: 600px) {
+  .nav-container a:not(:first-child),
+  .nav-container a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav-container.responsive {position: relative;}
+  .nav-container.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .nav-container.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+   -->
+
+
+<!-- <div class=.nav-container" id="m.nav-container">
+  <a href="#home" class="active">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  
+  <a href="#about">About</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div> -->
+
+<!-- 
+<script>
+const navBurger = () => {
+  var x = document.getElementById("right-side");
+  if (x.className === "rightNav") {
+    x.className += " responsive";
+  } else {
+    x.className = "rightNav";
+  }
+}
+</script> -->

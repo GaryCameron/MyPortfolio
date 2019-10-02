@@ -41,9 +41,8 @@ document.getElementById('duck').addEventListener('click', function () {
 
 window.addEventListener('scroll', function () {
     function show() {
-        
-        document.getElementById('my-stack').style.display = "flex";
-        document.getElementById('my-stack').classList.add('animated', 'fadeInRight')
+        document.getElementById('stackSection').style.display = "flex";
+        document.getElementById('stackSection').classList.add('animated', 'fadeInRight')
     }
     setTimeout(3000, show());
 });
@@ -62,7 +61,7 @@ window.addEventListener('scroll', function () {
 //     setTimeout(3000, show());
 // });
 
-let array = ["Cycling", "Family Dog 'Rocket'", "Yoga", "Cooking", "Family", "Education", "Intelligence", "Teamwork", "Support", "Meeting"]
+let array = ["Cycling", "Family Dog 'Rocket'", "Yoga", "Cooking", "Family", "Education", "Intelligence", "Teamwork", "Support", "Meeting", "Web", "Coding", "Chip", "Computer", "Data"]
 
 const showInfo = (target) => {
     if (target == "bicycle") {
@@ -85,15 +84,23 @@ const showInfo = (target) => {
         document.getElementById('aboutTest').innerHTML = array[8];
     } else if (target == "meeting") {
         document.getElementById('aboutTest').innerHTML = array[9];
+    } else if (target == "web") {
+        document.getElementById('aboutTest').innerHTML = array[10];
+    } else if (target == "coding") {
+        document.getElementById('aboutTest').innerHTML = array[11];
+    } else if (target == "chip") {
+        document.getElementById('aboutTest').innerHTML = array[12];
+    } else if (target == "computer") {
+        document.getElementById('aboutTest').innerHTML = array[13];
+    } else if (target == "data") {
+        document.getElementById('aboutTest').innerHTML = array[14];
     } else {
-        hideinfo();
+        return;
     }
 };
 
 const hideInfo = () => {
-    // let element = document.getElementById(`${target}`);
     document.getElementById('aboutTest').innerHTML = "";
-    // document.getElementById('aboutTest').style.backgroundColor = '';
 };
 
 
@@ -104,6 +111,21 @@ const navAction = (id) => {
     const target = document.getElementById(id)
     target.scrollIntoView()
 }
+
+// NAVBURGER Function
+const navBurger = () => {
+    var x = document.getElementById("right-side");
+    if (x.className === "rightNav") {
+      x.className += " responsive";
+    } else {
+      x.className = "rightNav";
+    }
+  }
+
+  const showStack = () => {
+      let stacksec2 = document.getElementById("stackSection2")
+      stacksec2.style.display = 'block';
+  }
 
 //   window.addEventListener('load', startDuck)
 
